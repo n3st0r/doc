@@ -1,12 +1,12 @@
 # Przepis na Django 1.8 + PostgreSQL 9.4
 
-Przepis jest dla Debian 8.x Jessie i python'a w wersji 3.
+Przepis jest dla Debian'a 8.x Jessie wraz z python'em w wersji 3.
 
-Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kewstia instalacji czy konfiguracji sudo lub su nie należą do tej dokumentacji.
+Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kwestia instalacji czy konfiguracji `sudo` lub `su` nie należą do tej dokumentacji.
 
 ## Instalacja python.
 
-Instalujemy pakiety python3 oraz pip3 do instalacji dodatkowych modułów.
+Instalujemy pakiety `python3` oraz `pip3` do instalacji dodatkowych modułów.
 
 ```
 apt-get install python3 python3-pip
