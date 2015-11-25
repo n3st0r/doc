@@ -24,11 +24,11 @@ cp -a /usr/share/easy-rsa/* /etc/CA
 ### Przygotowanie danych
 
 Często używane dane przy konfiguracji OpenVPN trzymane są w pliku zmiennych.
-```
+```sh
 vim /etc/CA/vars
 ```
 a następnie należy ustawić zmienne w systemie
-```
+```sh
 cd /etc/CA
 source vars
 ```
@@ -36,7 +36,7 @@ source vars
 ## Rozwiązywanie problemów
 
 Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
-```
+```sh
 nmap -sU 192.168.1.1 
 ```
 
