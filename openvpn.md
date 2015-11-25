@@ -98,8 +98,56 @@ server 192.168.2.0 255.255.255.0
 
 ```
 
+## Certyfikaty, klucze i konfiguracja dla klienta
 
+### Generowanie certyfikatu i kluczy dla klienta
+Dla każdego urządzenia klienta należy utworzyć certyfikat oraz klucz.
+Do generowania certyfikatów należy używać narzędzia:
+```
+./build-key-pass nazwa_klienta
+```
+Podczas generowania kluczy i certyfikatów pojawi się pytanie o hasło.
+Jest to najprostszy sposób przed zabezpieczeniem, przed kradzieżą
+i nieuprawnionym wykorzystaniu certyfikatów klienta VPN.
+
+### Przygotowanie konfiguracji dla klienta
+
+
+```
+remote 192.168.1.1 1194 # Adres IP serwera VPN oraz port
+proto udp # Protokół UDP
+dev tun   # 
+client    # Łączę się jako klient klienta
+ns-cert-type server # Upewniamy sie ze laczymy sie z serwerem
+fragment 1000
+resolv-retry infinite
+
+nobind
+user nobody
+group nogroup
+persist-key
+persist-tun
+
+ca ca.crt       # Certyfikat serwera
+cert client.crt # Plik certyfikatu klienta
+key client.key  # Plik klucza klienta
+ 
+tls-auth ta.key 1
+cipher AES-256-CBC
+verb 3
+```
 ## Odwoływanie certyfikatów
+
+Odwołanie certyfikatu skutkuje utratą ważności klucza oraz certyfikatu.
+Samo odwołanie wykonuje się komendą:
+```sh
+./revoke-full klient13
+```
+
+Dodatkowo w konfiguracji serwera musi być linia:
+```
+crl-verify crl.pem
+```
 
 ## Rozwiązywanie problemów
 
