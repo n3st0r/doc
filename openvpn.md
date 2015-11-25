@@ -77,8 +77,25 @@ Tworzymy plik ta.key, który będzie dodatkowo zabezpieczał naszego VPN'a
 openvpn --genkey --secret ta.key
 ```
 
+## Konfiguracja serwera
+
+Tworzymy plik konfiguracji serwera:
+
+```
+dev tun   # Tradycyjny VPN jako bridge
+proto udp # Domyślnie używamy protokołu UDP
+port 1194 # Domyślny port usługi OpenVPN
+ca ca.crt # Certyfikat CA, zwróć uwagę na uprawnienia, powinno być 644
+cert vpn-serwer.crt # Certyfikat serwera vpn
+key  vpn-serwer.key # Klucz serwera vpn
+dh dh2048.pem # Pilk klucza używany podczas podczas wymiany kluczy prywatnych
+tls-auth ta.key 0
+server 192.168.2.0 255.255.255.0
+
+```
 
 
+## Odwoływanie certyfikatów
 
 ## Rozwiązywanie problemów
 
@@ -86,4 +103,5 @@ Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
 ```sh
 nmap -sU 192.168.1.1 
 ```
+
 
