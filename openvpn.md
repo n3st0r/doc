@@ -17,4 +17,10 @@ Dlatego na początku przygotowuję katalog:
 mkdir /etc/CA
 ```
 
+## Rozwiązywanie problemów
+
+Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
+```
+nmap -sU 192.168.1.1 
+```
 
