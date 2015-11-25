@@ -2,7 +2,7 @@
 
 Przepis jest dla Debian'a 8.x Jessie wraz z python'em w wersji 3.
 
-Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kwestia instalacji czy konfiguracji `sudo` lub `su` nie należą do tej dokumentacji.
+Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kwestia instalacji czy konfiguracji `sudo` lub `su` nie należą do tej dokumentacji. Do konfiguracji używam edytora vim, którego instalacja i konfiguracja jest pomięta w tym dokumencie.
 
 ## Instalacja python.
 
@@ -66,4 +66,23 @@ pip3 install django
 django-admin.py startproject projekt .
 ```
 
+### Konfiguracja bazy danych
 
+Konfiguracja bazy danych musi być wykonana w pliku:
+```
+vim projekt/settings.py
+```
+
+Należy skonfigurować odpowiedni sterownik bazy danych, nazwę bazy, użytkownika, hasło oraz host i port. W tym przypadku `host` to localhost, a `port` można pominąć. Jako sterownik bazy użyty zostanie `psycopg2`, który został wcześniej zainstalowany narzędziem `pip3`.
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'projekt',
+        'USER': 'użytkownik',
+        'PASSWORD': 'hasło',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+```
