@@ -51,7 +51,7 @@ Z sesji wychodzimy wklepując:
 \q
 ```
 
-Sesję shell użytkownika 'postgres' zamykamy skrótem 'Ctrl + d'.
+Sesję shell użytkownika `postgres` zamykamy skrótem `Ctrl + d`.
 
 ## Instalacja Django
 
