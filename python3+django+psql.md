@@ -53,5 +53,20 @@ Z sesji wychodzimy wklepując:
 
 Sesję shell użytkownika 'postgres' zamykamy skrótem 'Ctrl + d'.
 
-## Instalacja django
+## Instalacja Django
+
+W pakietach Debian'a dostępna jest starsza wersja Django 1.7. Aktualna wersja Django to 1.8.6. Oprócz nowości wprowadzonych w tej wersji znaczącym faktem jest to, że to jest wersja LTS.
+
+Należy zwrócić uwagę, aby użyć programu `pip3`, a nie `pip`.
+
+```
+pip3 install django
+```
+
+### Tworzenie aplikacji.
+
+```
+django-admin.py startproject projekt .
+```
+
 
