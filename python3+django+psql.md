@@ -8,3 +8,9 @@ Przepis jest dla Debian 8.x Jessie i python'a w wersji 3.
 apt-get install python3
 ```
 
+## Instalacja postgresql
+
+```
+apt-get install postgresql postgresql-contrib
+```
+
