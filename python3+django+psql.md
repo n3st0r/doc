@@ -46,3 +46,12 @@ Przydzielamy wszystkie prawa utworzonemu użytkownikowi do nowej bazy.
 GRANT ALL PRIVILEGES ON DATABASE projekt TO użytkownik;
 ```
 
+Z sesji wychodzimy wklepując:
+```
+\q
+```
+
+Sesję shell użytkownika 'postgres' zamykamy skrótem 'Ctrl + d'.
+
+## Instalacja django
+
