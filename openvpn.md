@@ -86,15 +86,23 @@ openvpn --genkey --secret ta.key
 Tworzymy plik konfiguracji serwera:
 
 ```
+local 192.168.1.1
 dev tun   # Tradycyjny VPN jako bridge
 proto udp # Domyślnie używamy protokołu UDP
 port 1194 # Domyślny port usługi OpenVPN
+fragment 1000
+mssfix 1000 #
 ca ca.crt # Certyfikat CA, zwróć uwagę na uprawnienia, powinno być 644
 cert vpn-serwer.crt # Certyfikat serwera vpn
 key  vpn-serwer.key # Klucz serwera vpn
 dh dh2048.pem # Pilk klucza używany podczas podczas wymiany kluczy prywatnych
 tls-auth ta.key 0
 server 192.168.2.0 255.255.255.0
+
+ifconfig-pool-persist ipp.txt # Definicja ip dla klientów
+client-config-dir firma # Katalog ustawien klientow
+ccd-exclusive           # Dopuszczamy tylko ZNANYCH klientow
+push "route 192.168.3.0 255.255.255.0" # Routing do sieci firmowej
 
 ```
 
@@ -119,7 +127,6 @@ proto udp # Protokół UDP
 dev tun   # 
 client    # Łączę się jako klient klienta
 ns-cert-type server # Upewniamy sie ze laczymy sie z serwerem
-fragment 1000
 resolv-retry infinite
 
 nobind
@@ -134,7 +141,8 @@ key client.key  # Plik klucza klienta
  
 tls-auth ta.key 1
 cipher AES-256-CBC
-verb 3
+
+erb 3
 ```
 ## Odwoływanie certyfikatów
 
