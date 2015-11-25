@@ -18,4 +18,31 @@ apt-get install python3 python3-pip
 apt-get install postgresql postgresql-contrib
 ```
 
+### Konfiguracja bazy danych
+
+Początkową konfigurację najłatwiej wykonać z poziomu użytkownika postgres.
+
+```
+su - postgres
+```
+
+Teraz można zalogować się do interaktywnej sesji PostgreSQL'a bez dodatkowej autoryzacji:
+```
+psql
+```
+
+Tworzymy bazę danych:
+```
+CREATE DATABASE projekt;
+```
+
+Następnie tworzymy użytkownika:
+```
+CREATE USER użytkownik WITH PASSWORD 'hasło';
+```
+
+Przydzielamy wszystkie prawa utworzonemu użytkownikowi do nowej bazy.
+```
+GRANT ALL PRIVILEGES ON DATABASE projekt TO użytkownik;
+```
 
