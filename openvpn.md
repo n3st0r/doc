@@ -98,11 +98,14 @@ key  vpn-serwer.key # Klucz serwera vpn
 dh dh2048.pem # Pilk klucza używany podczas podczas wymiany kluczy prywatnych
 tls-auth ta.key 0
 server 192.168.2.0 255.255.255.0
+push "route 192.168.3.0 255.255.255.0" # Routing do sieci firmowej
 
 ifconfig-pool-persist ipp.txt # Definicja ip dla klientów
 client-config-dir firma # Katalog ustawien klientow
 ccd-exclusive           # Dopuszczamy tylko ZNANYCH klientow
-push "route 192.168.3.0 255.255.255.0" # Routing do sieci firmowej
+#client-to-client       # Zgoda na routing pomiędzy klientami
+#duplicate-cn           # Zgoda na wielokrotne jednoczesne logowanie
+						# z tą samą nazwą użytkownika, WYŁĄCZYĆ!
 
 status /var/log/openvpn-status.log 20
 log /var/log/openvpn.log
