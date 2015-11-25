@@ -159,6 +159,14 @@ Dodatkowo w konfiguracji serwera musi być linia:
 ```
 crl-verify crl.pem
 ```
+## Włącz routing
+```
+echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/router.conf
+```
+Teraz uruchamiamy routing i jednocześnie weryfikujemy powyższy wpis:
+```
+echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/router.conf
+```
 
 ## Rozwiązywanie problemów
 
