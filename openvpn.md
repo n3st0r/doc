@@ -1,6 +1,10 @@
 # Instalacja i konfiguracja OpenVPN
 
 Notatki dla instalacji i konfiguracji OpenVPN'a. U Ciebie może nie zadziałać.
+Założenia:
+* 192.168.1.1 - adres serwera VPN
+* 192.168.2.0/24 - adresacja dla klientów VPN
+* 192.168.3.0/24 - adresacja sieci za VPN'em
 
 ## Instalacja pakietów
 
@@ -108,4 +112,4 @@ nmap -sU 192.168.1.1
 * [Portal OpenVPN Community](https://openvpn.net/index.php/open-source.html)
 * [OpenVPN na Wiki (eng.)](https://en.wikipedia.org/wiki/OpenVPN)
 * [Praktyczna implementacja sieci VPN na przykładzie OpenVPN](http://sekurak.pl/praktyczna-implementacja-sieci-vpn-na-przykladzie-openvpn/)
-* [OPENVPN BEZ TAJEMNIC](https://badsector.pl/w-praktyce/artykuly/openvpn-bez-tajemnic-cz-i.121.html)
+* [OpenVPN bez tajemnic](https://badsector.pl/w-praktyce/artykuly/openvpn-bez-tajemnic-cz-i.121.html)
