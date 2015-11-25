@@ -8,13 +8,13 @@ Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kwe
 
 Instalujemy pakiety `python3` oraz `pip3` do instalacji dodatkowych modułów.
 
-```
+```sh
 apt-get install python3 python3-pip
 ```
 
 ## Instalacja postgresql
 
-```
+```sh
 apt-get install postgresql postgresql-contrib
 ```
 
@@ -22,34 +22,31 @@ apt-get install postgresql postgresql-contrib
 
 Początkową konfigurację najłatwiej wykonać z poziomu użytkownika postgres.
 
-```
+```sh
 su - postgres
 ```
 
 Teraz można zalogować się do interaktywnej sesji PostgreSQL'a bez dodatkowej autoryzacji:
-```
+```sh
 psql
 ```
 
 Tworzymy bazę danych:
-```
+```sql
 CREATE DATABASE projekt;
 ```
 
 Następnie tworzymy użytkownika:
-```
+```sql
 CREATE USER użytkownik WITH PASSWORD 'hasło';
 ```
 
 Przydzielamy wszystkie prawa utworzonemu użytkownikowi do nowej bazy.
-```
+```sql
 GRANT ALL PRIVILEGES ON DATABASE projekt TO użytkownik;
 ```
 
-Z sesji wychodzimy wklepując:
-```
-\q
-```
+Z sesji wychodzimy wklepując `\q`.
 
 Sesję shell użytkownika `postgres` zamykamy skrótem `Ctrl + d`.
 
@@ -59,13 +56,13 @@ W pakietach Debian'a dostępna jest starsza wersja Django 1.7. Aktualna wersja D
 
 Należy zwrócić uwagę, aby użyć programu `pip3`, a nie `pip`.
 
-```
+```sh
 pip3 install django
 ```
 
 ### Tworzenie aplikacji.
 
-```
+```sh
 django-admin.py startproject projekt .
 ```
 
