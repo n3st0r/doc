@@ -54,6 +54,19 @@ za pierwszym razem należy przygotować katalogi
 ./build-ca
 ```
 
+## Tworzenie certyfikatów i kluczy dla serwera
+
+Tworzymy certyfikat i klucz serwera
+```
+./build-key-server vpn-serwer
+```
+W wyniku tego polecenia w katalogu kluczy powinny powstać trzy pliki
+```
+vpn-serwer.crt
+vpn-serwer.csr
+vpn-serwer.key
+```
+
 Tworzymy klucz Diffie-Hellman'a
 ```
 ./build-dh
@@ -63,6 +76,10 @@ Tworzymy plik ta.key, który będzie dodatkowo zabezpieczał naszego VPN'a
 ```
 openvpn --genkey --secret ta.key
 ```
+
+
+
+
 ## Rozwiązywanie problemów
 
 Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
