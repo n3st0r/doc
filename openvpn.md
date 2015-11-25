@@ -104,6 +104,9 @@ client-config-dir firma # Katalog ustawien klientow
 ccd-exclusive           # Dopuszczamy tylko ZNANYCH klientow
 push "route 192.168.3.0 255.255.255.0" # Routing do sieci firmowej
 
+status /var/log/openvpn-status.log 20
+log /var/log/openvpn.log
+verb 3
 ```
 
 ## Certyfikaty, klucze i konfiguracja dla klienta
