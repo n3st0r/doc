@@ -104,4 +104,8 @@ Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
 nmap -sU 192.168.1.1 
 ```
 
-
+## Źródła
+* [Portal OpenVPN Community](https://openvpn.net/index.php/open-source.html)
+* [OpenVPN na Wiki (eng.)](https://en.wikipedia.org/wiki/OpenVPN)
+* [Praktyczna implementacja sieci VPN na przykładzie OpenVPN](http://sekurak.pl/praktyczna-implementacja-sieci-vpn-na-przykladzie-openvpn/)
+* [OPENVPN BEZ TAJEMNIC](https://badsector.pl/w-praktyce/artykuly/openvpn-bez-tajemnic-cz-i.121.html)
