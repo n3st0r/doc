@@ -142,7 +142,7 @@ key client.key  # Plik klucza klienta
 tls-auth ta.key 1
 cipher AES-256-CBC
 
-erb 3
+verb 3
 ```
 ## Odwoływanie certyfikatów
 
