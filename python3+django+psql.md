@@ -59,7 +59,16 @@ Należy zwrócić uwagę, aby użyć programu `pip3`, a nie `pip`.
 ```sh
 pip3 install django
 ```
+Następnie warto doinstalować moduły
+```
+# Unitest do testów jednostkowych jest już dostarczany z python3
+# Obsługa testów funkcjonalnych
+pip3 install --upgrade selenium
 
+# Jeśli domyślny system szablonów jest za wolny, czy zbyt ubogi
+# to warto doinstalować system szablonów jinja2
+pip3 install Jinja2
+```
 ### Tworzenie aplikacji.
 
 ```sh
@@ -85,4 +94,23 @@ DATABASES = {
         'PORT': '',
     }
 }
+```
+
+## Konfiguracja aplikacji
+
+Poniżej znajduje się skrypt do rozszerzenia projektu o katalogi dla plików statycznych oraz szablonów. Plik można sobie dowolnie modyfikować i rozszerzać według własnych potrzeb.
+
+```sh
+DIR_CSS = 'static/css'
+DIR_JS  = 'static/js'
+
+mkdir {$DIR_CSS,$DIR_JS}
+
+```
+
+Następnie należy zmodyfikować ustawienia aplikacji w pliku `projekt/settings.py`
+```python
+STATIC_PATH = os.path.join(PROJECT_PATH,'static') STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+	STATIC_PATH, )
 ```
