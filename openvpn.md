@@ -24,9 +24,21 @@ cp -a /usr/share/easy-rsa/* /etc/CA
 ### Przygotowanie danych
 
 Często używane dane przy konfiguracji OpenVPN trzymane są w pliku zmiennych.
+
 ```sh
 vim /etc/CA/vars
 ```
+
+Żadne z poniższych zmiennych nie powinny zostać puste
+```sh
+export KEY_COUNTRY=""
+export KEY_PROVINCE=""
+export KEY_CITY=""
+export KEY_ORG=""
+export KEY_EMAIL=""
+export KEY_OU=""
+```
+
 a następnie należy ustawić zmienne w systemie
 ```sh
 cd /etc/CA
