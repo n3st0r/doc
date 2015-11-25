@@ -6,8 +6,10 @@ Wszystkie polecenia wykonywane są z poziomu uprzywilejowanego użytkownika. Kew
 
 ## Instalacja python.
 
+Instalujemy pakiety python3 oraz pip3 do instalacji dodatkowych modułów.
+
 ```
-apt-get install python3
+apt-get install python3 python3-pip
 ```
 
 ## Instalacja postgresql
