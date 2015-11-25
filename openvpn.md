@@ -44,7 +44,25 @@ a następnie należy ustawić zmienne w systemie
 cd /etc/CA
 source vars
 ```
+za pierwszym razem należy przygotować katalogi
+```
+./clean-all
+```
+### Tworzymy CA
 
+```
+./build-ca
+```
+
+Tworzymy klucz Diffie-Hellman'a
+```
+./build-dh
+```
+
+Tworzymy plik ta.key, który będzie dodatkowo zabezpieczał naszego VPN'a 
+```
+openvpn --genkey --secret ta.key
+```
 ## Rozwiązywanie problemów
 
 Narzędziem nmap można przeskanować porty w poszukiwani usługi openvpn:
