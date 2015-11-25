@@ -6,7 +6,7 @@ Notatki dla instalacji i konfiguracji OpenVPN'a. U Ciebie może nie zadziałać.
 
 Po prostu:
 ```sh
-apt-get install openvpn easy-rsa
+apt-get install openvpn easy-rsa haveged
 ```
 
 ## Centrum autoryzacji.
