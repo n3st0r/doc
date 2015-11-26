@@ -11,7 +11,21 @@ Po prostu w katalogu, który jest głównym katalogiem projektu wpisujemy polece
 ```
 git init
 ```
-Warto podpisać kto wykonuje zmiany
+### Dostosowanie git'a
+#### Kolorowy diff
+Polecenie `git diff` posiada opcję `–color` do wyświetlania zmian w kolorach. Warto skonfigurować nawet globalnie tą opcję na stałe:
+```
+git config --global diff.color true
+```
+#### Jeszcze więcej kolorów
+Warto rozszerzyć kolorowanie dla poleceń status i branch:
+```
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+```
+
+#### Warto podpisać kto wykonuje zmiany
 ```
 git config user.name "Twój nick lub imię i nazwisko"
 git config user.email "twój@mail.pl"
@@ -20,6 +34,7 @@ Weryfikacja wprowadzonych zmian:
 ```
 git config --list
 ```
+
 
 ### Ignorowanie plików
 
