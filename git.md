@@ -22,4 +22,11 @@ echo "__pycache__" >>.gitignore
 echo "*.pyc" >>.gitignore
 ```
 
+## Dodawanie plików do repozytorium
+
+Teraz można dodać bieżący katalog do repozytorium
+```
+git add .
+```
+
 
