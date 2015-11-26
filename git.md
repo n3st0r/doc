@@ -35,3 +35,9 @@ git add .
 git status
 ```
 
+## Aktualizacja zdalnego repozytorium
+```
+git push origin master
+```
+
+
