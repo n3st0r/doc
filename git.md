@@ -65,3 +65,16 @@ git push origin master
 git pull origin master
 ```
 
+## Branch, czyli rozgałęzienia projektu
+
+Utworzenie nowej gałęzi projektu, a następnie przełączenie aktualnej pracy
+na nowo utworzoną gałąź:
+```
+git checkout -b [nazwa_brancha]
+```
+
+Pobieranie zmian z gałęzi master do aktywnej gałęzi
+```
+git rebase master
+```
+
