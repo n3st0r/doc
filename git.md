@@ -12,3 +12,14 @@ Po prostu w katalogu, który jest głównym katalogiem projektu wpisujemy polece
 git init
 ```
 
+### Ignorowanie plików
+
+Jeśli w projekcie znajdują się pliki, które nie powinny być umieszczone
+w repozytorium, to należy je umieścić w pliku `.gitignore`. Na przykład:
+```
+echo "db.sqlite3" >> .gitignore
+echo "__pycache__" >>.gitignore
+echo "*.pyc" >>.gitignore
+```
+
+
