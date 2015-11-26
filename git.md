@@ -42,9 +42,19 @@ git commit -a -m'Komentarz do zmian'
 ```
 
 ## Status lokalnego repozytorium
-
+Wyświetla listę wszystkich zmienionych plików w lokalnym repozytorium.
 ```
 git status
+```
+
+Szczegółowo wyświetla zmiany w wybranym pliku
+```
+git diff [plik]
+```
+
+Wyświetlanie zmian we wszystkich plikach
+```
+git diff
 ```
 
 ### Usuwanie plików przed aktualizacją zdalnego repozytorium
@@ -91,5 +101,10 @@ git branch -d [branch]
 Pobranie najnowszych zmian dla aktywnego rozgałęzienia ze zdalnego repozytorium.
 ```
 git pull --rebase
+```
+
+Wyświetlenie listy gałęzi projektu na zdalnym repozytorium
+```
+git branch -r
 ```
 
