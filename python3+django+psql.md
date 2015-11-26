@@ -123,3 +123,15 @@ STATICFILES_DIRS = (
 apt-get -t jessie-backports install nginx
 ```
 
+### Włączenie obsługi `SPDY`
+
+Jest to jeden z powodów, dla którego nginx jest instalowany z backports'ów.
+Konfiguracja jest banalnie prosta:
+```
+server {
+    listen 443 ssl spdy;
+    ...
+```
+Weryfikację działania `SPDY` można przeprowadzić na stronie (spdycheck.org)
+
+
