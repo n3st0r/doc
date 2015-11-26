@@ -40,4 +40,8 @@ git status
 git push origin master
 ```
 
+## Pobieranie zmian ze zdalnego repozytorium
+```
+git pull origin master
+```
 
