@@ -18,11 +18,16 @@ Polecenie `git diff` posiada opcję `–color` do wyświetlania zmian w kolorach
 git config --global diff.color true
 ```
 #### Jeszcze więcej kolorów
-Warto rozszerzyć kolorowanie dla poleceń status i branch:
+Globalna konfiguracja dla wszystkich czynności
 ```
-git config --global color.diff auto
-git config --global color.status auto
-git config --global color.branch auto
+git config --global color.ui always
+```
+Lub specyficzna konfiguracja dla poleceń typu status czy branch:
+```
+git config --global color.branch true
+git config --global color.diff true
+git config --global color.interactive true
+git config --global color.status true
 ```
 
 #### Warto podpisać kto wykonuje zmiany
