@@ -132,6 +132,4 @@ server {
     listen 443 ssl spdy;
     ...
 ```
-Weryfikację działania `SPDY` można przeprowadzić na stronie (spdycheck.org)
-
-
+Weryfikację działania `SPDY` można przeprowadzić na stronie (https://spdycheck.org/)

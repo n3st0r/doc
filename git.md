@@ -11,6 +11,15 @@ Po prostu w katalogu, który jest głównym katalogiem projektu wpisujemy polece
 ```
 git init
 ```
+Warto podpisać kto wykonuje zmiany
+```
+git config user.name "Twój nick lub imię i nazwisko"
+git config user.email "twój@mail.pl"
+```
+Weryfikacja wprowadzonych zmian:
+```
+git config --list
+```
 
 ### Ignorowanie plików
 
@@ -107,4 +116,3 @@ Wyświetlenie listy gałęzi projektu na zdalnym repozytorium
 ```
 git branch -r
 ```
-
