@@ -52,7 +52,7 @@ Sesję shell użytkownika `postgres` zamykamy skrótem `Ctrl + d`.
 
 ## Instalacja Django
 
-W pakietach Debian'a dostępna jest starsza wersja Django 1.7. Aktualna wersja Django to 1.8.6. Oprócz nowości wprowadzonych w tej wersji znaczącym faktem jest to, że to jest wersja LTS.
+W pakietach Debian'a dostępna jest starsza wersja Django 1.7. Aktualna wersja Django to 1.8.7. Oprócz nowości wprowadzonych w tej wersji znaczącym faktem jest to, że to jest wersja LTS.
 
 Należy zwrócić uwagę, aby użyć programu `pip3`, a nie `pip`.
 
@@ -101,10 +101,12 @@ DATABASES = {
 Poniżej znajduje się skrypt do rozszerzenia projektu o katalogi dla plików statycznych oraz szablonów. Plik można sobie dowolnie modyfikować i rozszerzać według własnych potrzeb.
 
 ```sh
-DIR_CSS = 'static/css'
-DIR_JS  = 'static/js'
+#/bin/bash
 
-mkdir {$DIR_CSS,$DIR_JS}
+DIR_CSS='static/css'
+DIR_JS='static/js'
+
+mkdir -p {$DIR_CSS,$DIR_JS}
 
 ```
 
