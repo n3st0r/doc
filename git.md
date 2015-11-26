@@ -29,4 +29,9 @@ Teraz można dodać bieżący katalog do repozytorium
 git add .
 ```
 
+## Status lokalnego repozytorium
+
+```
+git status
+```
 
