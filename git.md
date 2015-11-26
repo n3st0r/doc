@@ -35,6 +35,14 @@ git add .
 git status
 ```
 
+### Usuwanie plików przed aktualizacją zdalnego repozytorium
+Usuwanie plików z lokalnego cache, przed aktualizacją zdalnego repozytorium.
+```
+git rm -r --cached katalog/__pycache__
+```
+Dlatego po commicie zawsze warto sprawdzić `git status`, aby mieć
+pewność, czy coś niepotrzebnego nie zostało dodane do repo.
+
 ## Aktualizacja zdalnego repozytorium
 ```
 git push origin master
