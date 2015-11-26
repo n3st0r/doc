@@ -56,12 +56,12 @@ Wyświetla listę wszystkich zmienionych plików w lokalnym repozytorium.
 git status
 ```
 
-Szczegółowo wyświetla zmiany w wybranym pliku
+Szczegółowo wyświetla zmiany w wybranym pliku przed commit'em
 ```
 git diff [plik]
 ```
 
-Wyświetlanie zmian we wszystkich plikach
+Wyświetlanie zmian we wszystkich plikach przed commit'em
 ```
 git diff
 ```
