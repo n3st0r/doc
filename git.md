@@ -70,11 +70,26 @@ git pull origin master
 Utworzenie nowej gałęzi projektu, a następnie przełączenie aktualnej pracy
 na nowo utworzoną gałąź:
 ```
-git checkout -b [nazwa_brancha]
+git checkout -b [branch]
 ```
 
 Pobieranie zmian z gałęzi master do aktywnej gałęzi
 ```
 git rebase master
+```
+
+Usuwanie gałęzi na zdalnym repozytorium
+```
+git push origin :[branch]
+```
+
+Usuwanie lokalnego rozgałęzienia projektu. Nie można usunąć w ten sposób aktywnego brancha
+```
+git branch -d [branch]
+```
+
+Pobranie najnowszych zmian dla aktywnego rozgałęzienia ze zdalnego repozytorium.
+```
+git pull --rebase
 ```
 
