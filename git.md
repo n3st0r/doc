@@ -29,6 +29,18 @@ Teraz można dodać bieżący katalog do repozytorium
 git add .
 ```
 
+## Zatwierdzanie zmian - commit
+
+Teoretycznie do zatwierdzania zmian służy polecenie:
+```
+git commit
+```
+
+Znacznie lepiej używać w połączeniu z dwoma opcjami:
+```
+git commit -a -m'Komentarz do zmian'
+```
+
 ## Status lokalnego repozytorium
 
 ```
