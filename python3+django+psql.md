@@ -116,3 +116,10 @@ STATIC_PATH = os.path.join(PROJECT_PATH,'static') STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 	STATIC_PATH, )
 ```
+
+## Instalacja nginx
+
+```
+apt-get -t jessie-backports install nginx
+```
+
