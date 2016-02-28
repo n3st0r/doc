@@ -49,6 +49,11 @@ systemctl enable usługa.service
 systemctl disable usługa.service
 ```
 
+### Sprawdzenie statusu ON/OFF w różnych runlevelach:
+```
+ls /etc/systemd/system/*.wants/foobar.service	
+```
+
 ### Weryfikacja czy `usługa` jest automatycznie uruchamiana:
 ```
 systemctl is-enabled usługa.service; echo $?
