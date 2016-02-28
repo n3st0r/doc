@@ -6,32 +6,32 @@ systemctl
 ```
 ## Polecenie
 
-### Weryfikacja stanu usługi:
+### Weryfikacja stanu `usługi`:
 ```
 systemctl status usługa.service
 ```
 
-### Uruchomienie usługi:
+### Uruchomienie `usługi`:
 ```
 systemctl start usługa.service
 ```
 
-### Zatrzymanie usługi:
+### Zatrzymanie `usługi`:
 ```
 systemctl stop usługa.service
 ```
 
-### Restart usługi:
+### Restart `usługi`:
 ```
 systemctl restart usługa.service
 ```
 
-### Aktywacja automatycznego uruchaiania usługi:
+### Aktywacja automatycznego uruchamiania `usługi`:
 ```
 systemctl enable usługa.service
 ```
 
-### Dezaktywacja automatycznego uruchaiania usługi:
+### Dezaktywacja automatycznego uruchamiania `usługi`:
 ```
 systemctl disable usługa.service
 ```
