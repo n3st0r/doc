@@ -4,7 +4,7 @@
 ```
 systemctl
 ```
-## Polecenie
+## Polecenie systemctl
 
 ### Weryfikacja stanu `usługi`:
 ```
@@ -39,4 +39,14 @@ systemctl disable usługa.service
 ### Weryfikacja czy `usługa` jest automatycznie uruchamiana:
 ```
 systemctl is-enabled usługa.service; echo $?
+```
+
+## Polecenie systemd-analyze
+Dostarcza ogólnych informacji na temat procesu uruchamiania:
+```
+systemd-analyze
+```
+Szczegółowe informacje na temat uruchamiania każdej usługi:
+```
+systemd-analyze blame
 ```
