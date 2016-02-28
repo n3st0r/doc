@@ -36,3 +36,7 @@ systemctl enable usługa.service
 systemctl disable usługa.service
 ```
 
+### Weryfikacja czy `usługa` jest automatycznie uruchamiana:
+```
+systemctl is-enabled usługa.service; echo $?
+```
