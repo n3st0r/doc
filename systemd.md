@@ -1,10 +1,11 @@
 # Obsługa systemd
 
-## Listing uruchomionych usług
+## Polecenie systemctl
+
+### Listing uruchomionych usług
 ```
 systemctl
 ```
-## Polecenie systemctl
 
 ### Weryfikacja stanu `usługi`:
 ```
@@ -39,6 +40,31 @@ systemctl disable usługa.service
 ### Weryfikacja czy `usługa` jest automatycznie uruchamiana:
 ```
 systemctl is-enabled usługa.service; echo $?
+```
+
+## Widok jednostek w `systemctl`
+
+Mianem `jednostek/units` w systemd określane są:
+* usługi (.service)
+* punkty mountowania (.mount)
+* urządzenia (.device)
+* sockety (.socket)
+
+Poniżej polecenia do weryfikacji jednostek.
+
+### Wyświetlanie stanu wszystkich jednostek w systemie:
+```
+systemctl list-unit-files
+```
+
+### Wyświetlanie wszystkich uruchomionych jednostek:
+```
+systemctl list-units
+```
+
+### Wyświetlanie wszystkich niepoprawnych jednostek:
+```
+systemctl –failed
 ```
 
 ## Polecenie systemd-analyze
