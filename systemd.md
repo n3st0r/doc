@@ -49,6 +49,11 @@ systemctl enable usługa.service
 systemctl disable usługa.service
 ```
 
+### Maskowanie przed automatycznym lub nawet ręczym uruchamianiem usługi:
+```
+systemctl mask usługa.service
+```
+
 ### Sprawdzenie statusu ON/OFF w różnych runlevelach:
 ```
 ls /etc/systemd/system/*.wants/foobar.service	
@@ -81,7 +86,7 @@ systemctl list-units
 
 ### Wyświetlanie wszystkich niepoprawnych jednostek:
 ```
-systemctl –failed
+systemctl --failed
 ```
 
 ## Polecenie systemd-analyze
