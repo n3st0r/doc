@@ -27,6 +27,18 @@ systemctl stop usługa.service
 systemctl restart usługa.service
 ```
 
+### Przeładowanie ustawień `usługi`:
+Jeśli jest obsługiwane, następuje przeładowanie usługi bez jej restartu
+```
+systemctl reload usługa.service
+```
+
+### Warunkowy restart `usługi`:
+Przeładowanie usługi tylko w przypadku, gdy jest uruchomiona
+```
+systemctl condrestart usługa.service
+```
+
 ### Aktywacja automatycznego uruchamiania `usługi`:
 ```
 systemctl enable usługa.service
