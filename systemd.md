@@ -54,9 +54,13 @@ systemctl disable usługa.service
 systemctl mask usługa.service
 ```
 
+### Odmaskowanie usługi:
+```
+systemctl unmask usługa.service
+```
 ### Sprawdzenie statusu ON/OFF w różnych runlevelach:
 ```
-ls /etc/systemd/system/*.wants/foobar.service	
+ls /etc/systemd/system/*.wants/usługa.service	
 ```
 
 ### Weryfikacja czy `usługa` jest automatycznie uruchamiana:
