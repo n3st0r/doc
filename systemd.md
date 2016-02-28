@@ -20,3 +20,8 @@ systemctl start usługa.service
 ```
 systemctl stop usługa.service
 ```
+
+### Restart usługi:
+```
+systemctl restart usługa.service
+```
