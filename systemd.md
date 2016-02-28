@@ -25,3 +25,14 @@ systemctl stop usługa.service
 ```
 systemctl restart usługa.service
 ```
+
+### Aktywacja automatycznego uruchaiania usługi:
+```
+systemctl enable usługa.service
+```
+
+### Dezaktywacja automatycznego uruchaiania usługi:
+```
+systemctl disable usługa.service
+```
+
