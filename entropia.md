@@ -24,5 +24,6 @@ DAEMON_ARGS="-w 1024"
 
 Sprawdzanie jakości danych losowych:
 ```
+apt-get install rng-tools
 cat /dev/random | rngtest -c 1000
 ```
