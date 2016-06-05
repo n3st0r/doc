@@ -23,6 +23,16 @@ lub dodatkowo pozbyć się tabel systemowych:
 SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'
 ```
 
+# "Polonizacja" bazy
+Dodajemy w pliku `postgresql.conf`
+```
+timezone = 'Poland'
+lc_messages = 'pl_PL.UTF-8'  # locale for system error message strings
+lc_monetary = 'pl_PL.UTF-8'  # locale for monetary formatting
+lc_numeric = 'pl_PL.UTF-8'   # locale for number formatting
+lc_time = 'pl_PL.UTF-8'      # locale for time formatting
+```
+
 # Zakładanie bazy dla rsyslog'a
 Historycznie baza sysloga nazywana była Syslog (z wielkiej litery). U mnie baza nazywa się po prostu 'syslog':
 ```sql
