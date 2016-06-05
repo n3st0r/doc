@@ -48,10 +48,11 @@ GRANT SELECT,INSERT, UPDATE, DELETE TO nazwa_bazy_danych;
 Dodajemy w pliku `postgresql.conf`
 ```
 timezone = 'Poland'
-lc_messages = 'pl_PL.UTF-8'  # locale for system error message strings
-lc_monetary = 'pl_PL.UTF-8'  # locale for monetary formatting
-lc_numeric = 'pl_PL.UTF-8'   # locale for number formatting
-lc_time = 'pl_PL.UTF-8'      # locale for time formatting
+# Poniższy komunikat warto zostawić w języku angielskim - łatwiej znaleźć rozwiązanie problemu
+lc_messages = 'pl_PL.UTF-8'  # formatowanie komunikatów o błędach
+lc_monetary = 'pl_PL.UTF-8'  # formatowanie walut
+lc_numeric = 'pl_PL.UTF-8'   # formatowanie liczb
+lc_time = 'pl_PL.UTF-8'      # formatowanie daty i czasu
 ```
 
 # Zakładanie bazy dla rsyslog'a
