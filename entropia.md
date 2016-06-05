@@ -15,3 +15,14 @@ Ponowna weryfikacja entropii w systemie pokazuje, iż problem został rozwiązan
 cat /proc/sys/kernel/random/entropy_avail
 3581
 ```
+
+## Poziom entropii
+W pliku konfiguracji `/etc/default/haveged` można dodatkowo określić poziom entropii:
+```
+DAEMON_ARGS="-w 1024"
+```
+
+Sprawdzanie jakości danych losowych:
+```
+cat /dev/random | rngtest -c 1000
+```
