@@ -22,7 +22,10 @@ lub dodatkowo pozbyć się tabel systemowych:
 ```
 SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'
 ```
-
+## Informacje szczegółowe o tabeli:
+```sql
+\d+ nazwa_tabeli
+```
 ## Zakładanie bazy danych + kodowanie UTF-8
 ### Założenie bazy:
 ```sql
