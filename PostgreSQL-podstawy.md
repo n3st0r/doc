@@ -1,4 +1,4 @@
-#Obsługa bazy danych
+# Notatki - obsługa bazy danych PostgreSQL
 
 ## Wyświetlanie dostępnych baz:
 ```
@@ -21,6 +21,27 @@ SELECT * FROM pg_catalog.pg_tables
 lub dodatkowo pozbyć się tabel systemowych:
 ```
 SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema'
+```
+
+## Zakładanie bazy danych + kodowanie UTF-8
+### Założenie bazy:
+```sql
+CREATE DATABASE nazwa_bazy_danych WITH ENCODING ‘UTF8’;
+```
+
+### Założenie użytkownika bazy + konfiguracja 
+```sql 
+CREATE USER użytkownik_bazy WITH PASSWORD 'hasło_do_bazy';
+ALTER ROLE użytkownik_bazy SET client_encoding TO 'utf8';
+```
+Prawnienia można nadać wszystkie do bazy:
+```sql
+GRANT ALL PRIVILEGES ON DATABASE użytkownik_bazy to nazwa_bazy_danych;
+```
+lub tylko wybrane:
+```sql
+GRANT CONNECT ON DATABASE użytkownik_bazy TO nazwa_bazy_danych;
+GRANT SELECT,INSERT, UPDATE, DELETE TO nazwa_bazy_danych;
 ```
 
 # "Polonizacja" bazy
