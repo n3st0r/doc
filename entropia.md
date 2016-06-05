@@ -17,9 +17,9 @@ cat /proc/sys/kernel/random/entropy_avail
 ```
 
 ## Poziom entropii
-W pliku konfiguracji `/etc/default/haveged` można dodatkowo określić poziom entropii:
+W pliku konfiguracji `/etc/default/haveged` można dodatkowo określić poziom entropii, np. na poziomie 2048:
 ```
-DAEMON_ARGS="-w 1024"
+DAEMON_ARGS="-w 2048"
 ```
 
 Sprawdzanie jakości danych losowych:
