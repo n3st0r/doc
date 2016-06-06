@@ -23,6 +23,12 @@ Zapisywanie aktualnych reguł do pliku
 ```
 nft list table inet filter > filter-table
 ```
+Monitorowanie aktualizacji reguł nftables:
+```
+nft monitor
+nft monitor rules
+nft monitor new rules
+```
 
 ## Includowanie plików
 ```
