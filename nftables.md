@@ -32,16 +32,11 @@ include "inet-filter-sets.nft"
 include "inet-filter-chain-input.nft"
 ```
 
-## Definicje i sety
+## Sety
 Jeśli nie ma takiej potrzeby, to nie używaj Set'a zamiast zmiennej.
 ```
-#!/usr/sbin/nft
- 
-define google_dns = 8.8.8.8   # Definicja zmiennej
-define ntp_servers = { 84.77.40.132, 176.31.53.99, 81.19.96.148, 138.100.62.8 }  # jak IPset
-
-add table filter
-add chain filter input { type filter hook input priority 0; }
-add rule filter input ip saddr $google_dns counter
-add rule filter input ip saddr $ntp_servers counter
+set ssh {
+  type ipv4_addr
+  elements = { 192.168.0.1, 192.168.0.2 }
+}
 ```
