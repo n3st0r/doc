@@ -46,6 +46,13 @@ set ssh {
   elements = { 192.168.0.1, 192.168.0.2 }
 }
 ...
-    ip saddr @ssh tcp dport ssh ct state new accept
+    tcp saddr @ssh tcp dport ssh ct state new accept
 ...
+```
+
+## Reguły
+
+```
+nft add rule inet filter input tcp saddr @ssh dport 22 ct state new tcp flags \& \(syn \| ack\) == syn log prefix \"inet/input/accept: \" counter accept
+
 ```
