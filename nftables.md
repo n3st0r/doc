@@ -33,7 +33,7 @@ include "inet-filter-chain-input.nft"
 ```
 
 ## Definicje i sety
-
+Jeśli nie ma takiej potrzeby, to nie używaj Set'a zamiast zmiennej.
 ```
 #!/usr/sbin/nft
  
