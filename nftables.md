@@ -56,3 +56,9 @@ set ssh {
 nft add rule inet filter input tcp saddr @ssh dport 22 ct state new tcp flags \& \(syn \| ack\) == syn log prefix \"inet/input/accept: \" counter accept
 
 ```
+
+```
+nft add rule inet filter input tcp dport 0-65535 reject
+nft add rule inet filter input udp dport 0-65535 counter drop
+nft add rule inet filter input counter drop
+```
