@@ -7,7 +7,7 @@ Oficjalny następca aplikacji: {ip,ip6,arp,eb}tables
 ## Instalacja
 W Jessie warto zainstalować kernal 4.x z backportów w Stretch bez problemów:
 ```
-apt install nft
+apt install nftables
 ```
 
 ## Zarządzanie z poziomu systemd
