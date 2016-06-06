@@ -39,4 +39,7 @@ set ssh {
   type ipv4_addr
   elements = { 192.168.0.1, 192.168.0.2 }
 }
+...
+    ip saddr @ssh tcp dport ssh ct state new accept
+...
 ```
