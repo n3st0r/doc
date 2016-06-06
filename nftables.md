@@ -21,7 +21,7 @@ nft -f file
 ```
 Zapisywanie aktualnych reguł do pliku
 ```
-nft list table filter > filter-table
+nft list table inet filter > filter-table
 ```
 
 ## Includowanie plików
