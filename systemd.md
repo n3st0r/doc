@@ -1,5 +1,12 @@
 # Obsługa systemd
 
+## Jednostki (`units`) w systemd
+Mianem `jednostek/units` w systemd określane są:
+* usługi (.service)
+* punkty mountowania (.mount)
+* urządzenia (.device)
+* sockety (.socket)
+
 ## Polecenie systemctl
 
 ### Listing uruchomionych usług
@@ -68,15 +75,7 @@ ls /etc/systemd/system/*.wants/usługa.service
 systemctl is-enabled usługa.service; echo $?
 ```
 
-## Widok jednostek w `systemctl`
-
-Mianem `jednostek/units` w systemd określane są:
-* usługi (.service)
-* punkty mountowania (.mount)
-* urządzenia (.device)
-* sockety (.socket)
-
-Poniżej polecenia do weryfikacji jednostek.
+## Poniżej polecenia do weryfikacji jednostek.
 
 ### Wyświetlanie plików modułu:
 Poniższe polecenie wyświetla wszytskie pliki należące do modułu oraz ich stan w systemie:
