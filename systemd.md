@@ -121,3 +121,21 @@ Szczegółowe informacje na temat uruchamiania każdej usługi:
 ```
 systemd-analyze blame
 ```
+
+## Przeglądanie zdarzeń związanych z modułem
+### Wyświetlenie wszystkich zdarze
+```
+journalctl
+```
+### Wyświetlenie komunikatów związanych z siecią
+```
+journalctl -u network.service
+```
+### Czyżby tail -f ;)
+```
+journalctl -f
+```
+### Logi kernela TYLKO!
+```
+journalctl -k
+```
