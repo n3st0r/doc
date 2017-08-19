@@ -78,11 +78,31 @@ Mianem `jednostek/units` w systemd określane są:
 
 Poniżej polecenia do weryfikacji jednostek.
 
-### Wyświetlanie stanu wszystkich jednostek w systemie:
+### Wyświetlanie plików modułu:
+Poniższe polecenie wyświetla wszytskie pliki należące do modułu oraz ich stan w systemie:
 ```
 systemctl list-unit-files
 ```
-
+### Pokazuje czy moduł załadowany:
+```
+systemctl list-units
+```
+### Wyświetlanie zależności dla usługi:
+```
+systemctl list-dependencies
+```
+### Lista socketów modułu:
+```
+systemctl list-sockets
+```
+### Lista zadań modułu:
+```
+systemctl list-jobs
+```
+### Lista domyślnych (np. jak poziom uruchomienia):
+```
+systemctl get – default
+```
 ### Wyświetlanie wszystkich uruchomionych jednostek:
 ```
 systemctl list-units
