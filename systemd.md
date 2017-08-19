@@ -1,11 +1,11 @@
 # Obsługa systemd
 
-## Jednostki (`units`) w systemd
-Mianem `jednostek/units` w systemd określane są:
-* usługi (.service)
-* punkty mountowania (.mount)
-* urządzenia (.device)
-* sockety (.socket)
+> ## :nut_and_bolt:  Jednostki (`units`) w systemd
+> Mianem `jednostek/units` w systemd określane są:
+> * usługi (.service)
+> * punkty mountowania (.mount)
+> * urządzenia (.device)
+> * sockety (.socket)
 
 ## Polecenie systemctl
 
