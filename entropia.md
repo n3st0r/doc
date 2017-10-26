@@ -1,10 +1,12 @@
 # Sprawdzanie poziomu entropii w systemie:
 > ## :nut_and_bolt:  Entropia
 >
+> Sprawdzanie w systemia
 > ```sh
 > cat /proc/sys/kernel/random/entropy_avail
 > ```
 
+## Sprawdzanie w systemia
 ```sh
 cat /proc/sys/kernel/random/entropy_avail
 ```
